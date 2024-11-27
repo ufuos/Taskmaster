@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taskmaster</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!--Main Container-->
+    <div class="'container">
+        <!--Header and Navigation-->
+        <header>
+            <h1>Taskmaster-Task Management System</h1>
+           <!-- <nav>
+        <ul>
+            <li><a href="#" id="dashboard">Dashboard</a></li>
+            <li><a href="taskForm" id="taskForm">My Task</a></li>
+            <li><a href="#" id="settings">Settings</a></li>
+            <li><a href="logout" id="logout">Logout</a></li>
+        </ul> 
+    </nav>-->
+    </header>
+    <!--main Content-->
+    <main>
+   <!--user Registration-->
+    <section id="auth-section">
+        <div id="register-form">
+            <h2>Register</h2>
+            <form id="register" action="/register" method="POST">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+                <label for="email">Email</label>
+                <input type="email"  id="email" name="email" required>
+                <label for="passworg">Password</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Register</button>
+            </form>
+        </div>
+
+        <div id="login-form">
+            <h2>Login</h2>
+            <form id="login" action="/login" method="POST">
+                <label for="login-username">Username</label>
+                <input type="text" id="login-username" name="username" required>
+                <label for="login-password">Password</label>
+                <input type="password" id="password" name="password" required>
+                <label for="login-email">Email</label>
+                <input type="email" id="email" name="email" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </section>
+
+    <!--Task Management Section-->
+    <section id="tasks-section">
+        <h2>Manage Your Task</h2>
+
+        <!--Task Creation Form-->
+        <form id="create-task-form" action="/tasks" method="POST">
+            <label for="task-title">Task Title</label>
+            <input type="text" id="task-title" name="title" required>
+
+            <label for="task-priority">Priority</label>
+            <select id="task-priority" name="Priority">
+                <option value="high">High</option>
+                <option value="medium">Medium</option>
+                <option value="low">LOW</option>
+            </select>
+
+            <label for="task-deadline">Deadline</label>
+            <input type="date" id="task-deadline" name="Deadline">
+
+            <button type="submit">Create Task</button>
+        </form>
+
+        <!--Task Filtering options-->
+        <div id="task-filter">
+            <label for="filter-priority">Filter by Priority</label>
+            <select id="filter-priority">
+                <option value="">All</option>
+                <option value="hign" >High</option>
+                <option value="medium">Medium</option>
+                <option value ="low">Low</option>
+            </select>
+            <label for="filter-search">Search</label>
+            <input type="text" id="filter-search" placeholder="Search task...">
+        </div>
+
+        <!--Task List-->
+        <div id="task-list">
+            <!--Each Task will displayed here-->
+            <ul>
+                <!--Example Task Item-->
+                <li class="task-iten">
+                    <span class="task-title">Example</span>
+                    <span class="task-priorit">Hign</span>
+                    <span class="task-deadlin">2024-12-31</span>
+                    <button class="edit-class">Edit</span>
+                    <button class="delete-class">Delete</button>
+                </li>
+            </ul>
+        </div>
+    </section>
+</main>
+   <!--Footer-->  
+   <footer>
+    <p>&copy: 2024 Taskmaster. All right reserved.</p>
+   </footer> 
+   </div>
+   <script src="scripts.js"></script> 
