@@ -1,19 +1,16 @@
-//document.addEventlistener()'DOMContentLoader', () => 
-    
 const baseUrl ="http://localhost: 5500";
 const authSection = document.getElementById("auth-section");
 const taskSection = document.getElementById("tasks-section");
 
-const taskForm = document.getElementById("create-task-form");
+const taskForm = document.getElementById("task-form");
 const taskList = document.getElementById("task-list");
-const loginForm = document.getElementById("login-form");
-const taskFilter = document.getElementById("task-filter")
-const registerForm = document.getElementById("register-form");
-const logoutButton = document.getElementById("logoutButton");
+const authForm = document.getElementById("auth-form");
+const registerButton = document.getElementById("register-button");
+const logoutButton = document.getElementById("logout-button");
 let token = null;
 
 // Authentication
-auth.addEventListener("submit", async (e) => {
+authForm.addEventListener("submit", async (e) => {
     e.preventDefault();
     const username = document.getElementById("username").value;
     const password = document.getElementById("password").value;
@@ -43,7 +40,7 @@ auth.addEventListener("submit", async (e) => {
         }
     
 });
-registerForm.addEventListener("click", async () => {
+registerButton.addEventListener("click", async () => {
     const username = document.getElementById("username").value;
     const password = document.getElementById("password").value;
     const email = document.getElementById("email").value;
